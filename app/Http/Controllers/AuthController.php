@@ -47,7 +47,7 @@ class AuthController
         $password = $_POST['password'];
 
         // Truy vấn người dùng từ cơ sở dữ liệu
-        $stmt = $this->connection->prepare("SELECT id, password, role FROM users WHERE username = :username");
+        $stmt = $this->connection->prepare("SELECT id, password, role,username FROM users WHERE username = :username");
         $stmt->bindParam(':username', $username);
         $stmt->execute();
         $user = $stmt->fetch();
@@ -58,6 +58,7 @@ class AuthController
                 // Lưu thông tin vào session
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['role'] = $user['role'];
+                $_SESSION['username'] = $user['username'];
 
                 // Chuyển hướng đến trang dashboard hoặc trang chính
                 if ($user['role'] === 'admin') {
@@ -65,7 +66,7 @@ class AuthController
                 } else if($user['role'] === 'user') {
                     header('Location: /');
                 }
-                 else {
+                else {
                     header('Location: /guest');
                 }
                 exit;

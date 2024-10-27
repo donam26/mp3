@@ -4,11 +4,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zing Mp3 (Fake by Sơn)</title>
+    <title>Zing Mp3 </title>
     <link rel="icon" href="/assets/img/icon-home/small-logo.svg" type="image/gif" sizes="16x16">
     <!-- reset css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -29,114 +30,11 @@
     <!-- icon fontawesome -->
     <link rel="stylesheet" href="/assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
+
 <body>
     <div class="main" style="background-image: url(/assets/img/background-theme/backroundThemes/0.svg);">
         <div class="grid">
-            <!-- BEGIN SIDEBAR -->
-            <div class="main-sidebar mobile-hiden">
-                <a href="#"></a>
-                <div class="sidebar__logo"></div>
-                <div class="sidebar__persional">
-                    <ul class="sidebar__list">
-                        <!-- sidebar__item--active -->
-                        <li class="sidebar__item js__sidebar-tabs js__main-color sidebar__item--active">
-                            <i class="far fa-play-circle"></i>
-                            Cá Nhân
-                        </li>
-                        <li class="sidebar__item js__sidebar-tabs js__main-color">
-                            <i class="fas fa-compact-disc"></i>
-                            Khám Phá
-                        </li>
-                        <li class="sidebar__item js__sidebar-tabs js__main-color">
-                            <i class="fas fa-chart-line"></i>
-                            #zingchart
-                        </li>
-                        <li class="sidebar__item js__main-color sidebar__item-radio js__toast">
-                            <i class="fas fa-broadcast-tower"></i>
-                            Radio
-                            <span>Live</span>
-                        </li>
-                        <li class="sidebar__item js__main-color js__toast">
-                            <i class="far fa-list-alt"></i>
-                            Theo Dõi
-                        </li>
-                    </ul>
-                </div>
-                <div class="sidebar__line"></div>
-                <div class="sidebar__library">
-                    <div class="sidebar__library-top">
-                        <ul class="sidebar__library-top-list sidebar__list">
-                            <!-- sidebar__item--active -->
-                            <li class="sidebar__item js__main-color js__toast">
-                                <i class="fas fa-music"></i>
-                                Nhạc Mới
-                            </li>
-                            <li class="sidebar__item js__main-color js__toast">
-                                <i class="fab fa-buromobelexperte"></i>
-                                Thể Loại
-                            </li>
-                            <li class="sidebar__item js__main-color js__toast">
-                                <i class="fas fa-star"></i>
-                                Top 100
-                            </li>
-                            <li class="sidebar__item js__main-color js__toast">
-                                <i class="fas fa-photo-video"></i>
-                                MV
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="sidebar__library-center">
-                        <span class="sidebar__library-center-vip-heading">Nghe nhạc không quảng cáo cùng kho nhạc VIP</span>
-                        <span class="sidebar__library-center-vip-body js__toast">Nâng cấp VIP</span>
-                    </div>
-                    <div class="sidebar__library-bot">
-                        <div class="sidebar__library-bot-heading js__main-color">
-                            Thư viện
-                            <div class="sidebar__library-bot-heading-option">
-                                <i class="fas fa-pencil-alt"></i>
-                            </div>
-                        </div>
-                        <ul class="sidebar__list">
-                            <li class="sidebar__library-bot-item sidebar__item js__sub-color js__toast">
-                                <i class="fas fa-music"></i>
-                                Bài hát
-                            </li>
-                            <li class="sidebar__library-bot-item sidebar__item js__sub-color js__toast">
-                                <i class="far fa-file-audio"></i>
-                                Playlist
-                            </li>
-                            <li class="sidebar__library-bot-item sidebar__item js__sub-color js__toast">
-                                <i class="fas fa-clock"></i>
-                                Gần đây
-                            </li>
-                        </ul>
-                        <div class="sidebar__library-bot-extra sidebar__item js__toast js__sub-color">
-                            Replay
-                            <span class="sidebar__library-bot-extra-option">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </span>
-                        </div>
-                        <div class="sidebar__library-bot-extra sidebar__item js__toast js__sub-color">
-                            Nhạc xuân
-                            <span class="sidebar__library-bot-extra-option">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </span>
-                        </div>
-                        <div class="sidebar__library-bot-extra sidebar__item js__toast js__sub-color">
-                            Nhạc trung quốc
-                            <span class="sidebar__library-bot-extra-option">
-                                <i class="fas fa-ellipsis-h"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar__add-playlist">
-                    <i class="fas fa-plus js__main-color"></i>
-                    <span class="js__main-color js__toast">Tạo playlist mới</span>
-                </div>
-
-            </div>
-            <!-- END SIDEBAR -->
+            <?php include __DIR__ . '/sidebar.php'; ?>
 
             <!-- BEGIN CONTAINER -->
             <div class="main-container">
@@ -191,7 +89,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                         <div class="header__right">
                             <div class="header__theme js__sub-color js__backgroundColor">
@@ -200,7 +98,7 @@
                             <div class="header__upload mobile-hiden js__sub-color js__toast js__backgroundColor hover">
                                 <i class="fas fa-upload"></i>
                             </div>
-    
+
                             <div class="header__right-overlay hiden"></div>
                             <!-- header__setting--active -->
                             <div class="header__setting mobile-hiden js__sub-color js__backgroundColor">
@@ -244,8 +142,8 @@
                                         Chính sách bảo mật
                                     </li>
                                 </ul>
-    
-    
+
+
                             </div>
                             <div class="header__user hover">
                                 <a href="https://www.facebook.com/sona7ns">
@@ -261,14 +159,21 @@
                         <a href="https://www.facebook.com/sona7ns">
                             <img src="/assets/img/header/user/0.jpg" alt="avata" class="profile__img">
                         </a>
-                        <span class="profile__name js__main-color">Văn Sơnn</span>
+                        <span class="profile__name js__main-color">
+                            <?php if (isset($_SESSION['username'])): ?>
+                                <p>Chào mừng, <?= htmlspecialchars($_SESSION['username']) ?>!</p>
+                            <?php else: ?>
+                                <p>Xin chào, khách!</p>
+                            <?php endif; ?>
+
+                        </span>
                         <div class="profile__vip mobile-hiden ">
                             <span class="profile__vip-upgrate btn js__toast">Nâng cấp vip</span>
                             <span class="profile__vip-entercode btn js__main-color js__backgroundColor js__toast">Nhập code vip</span>
                             <span class="profile__vip-more js__main-color js__backgroundColor"><i class="fas fa-ellipsis-h"></i></span>
                         </div>
                     </div>
-    
+
                     <div class="music__option">
                         <ul class="music__option-list js__backgroundColor">
                             <!-- top-music__option-item -->
@@ -324,7 +229,7 @@
                                         <img src="/assets/img/slider/15.webp" alt="anh slider" class="option-all__song-slider-img option-all__song-slider-img-third">
                                     </div>
                                 </div>
-                                
+
                                 <div class="col l-9 m-12 s-12">
                                     <div class="option-all__songs">
                                         <ul class="option-all__songs-list songs-list">
@@ -441,7 +346,7 @@
                                 </div>
                             </ul>
                         </div>
-    
+
                         <!-- option-all__mv -->
                         <div class="option-all__playlist option-all__margin_bot">
                             <div class="option-heading option-all__playlist-heading">
@@ -761,7 +666,7 @@
                                 </div>
                             </ul>
                         </div>
-    
+
                         <div class="option-all__playlist option-all__margin_bot mobile-hiden">
                             <div class="option-heading option-all__playlist-heading">
                                 <h3 class="option-heading-name js__main-color">MV</h3>
@@ -1243,7 +1148,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="main-container-zingchart js__container-panes ">
                     <div class="zingchart__headding js__main-color">
                         #zingchart
@@ -1533,7 +1438,7 @@
                                 </li>
                             </ul>
                         </div>
-    
+
                         <div class="theme-modal__body-group">
                             <span class="theme-modal__body-group-headding js__main-color">Nghệ Sĩ</span>
                             <ul class="theme-modal__body-group-list">
@@ -1577,7 +1482,7 @@
                                     </div>
                                     <span class="theme-modal__body-group-item-name js__main-color">Jisoo</span>
                                 </li>
-                              
+
                             </ul>
                         </div>
                         <div class="theme-modal__body-group">
@@ -1631,7 +1536,7 @@
                                     </div>
                                     <span class="theme-modal__body-group-item-name js__main-color">Đỏ</span>
                                 </li>
-                           
+
                             </ul>
                         </div>
                         <div class="theme-modal__body-group">
@@ -1663,49 +1568,17 @@
                                 </li>
                             </ul>
                         </div>
-                        
-                    </div>
-                    
 
-                    
+                    </div>
+
+
+
                 </div>
             </div>
             <!-- BEGIN NEXT-SONG -->
             <div class="main-nextsong mobile-tablet-hiden">
-                <div class="nextsong__option">
-                    <div class="nextsong__option-wrapper">
-                        <!-- nextsong__option-wrapper--active -->
-                        <div class="nextsong__option-wrapper-listplay nextsong__option-wrapper--active js__toast js__main-color">Danh sách phát</div>
-                        <div class="nextsong__option-wrapper-history js__sub-color js__toast">Nghe gần đây</div>
-                    </div>
-                    <div class="nextsong__option-alarm laptop-hiden js__toast">
-                        <i class="fas fa-stopwatch js__main-color"></i>
-                    </div>
-                    <div class="nextsong__option-more laptop-hiden js__toast">
-                        <i class="fas fa-ellipsis-h js__main-color"></i>
-                    </div>
-                </div>
                 <div class="nextsong__box">
                     <div class="nextsong__fist">
-                        <!-- <div class="nextsong__fist-item nextsong__item">
-                            <div class="nextsong__item-img" style="background-image: url(/assets/img/next-song/0.webp);">
-                                <div class="nextsong__item-playbtn"><i class="fas fa-play"></i></div>
-                            </div>
-                            <div class="nextsong__item-body">
-                                <span class="nextsong__item-body-heading">Là Ai Từ Bỏ, Là Ai Vô Tình</span>
-                                <span class="nextsong__item-body-depsc">Hương Ly, Jombie</span>
-                            </div>
-                            <div class="nextsong__item-action">
-                                nextsong__item-action-heart--unheart
-                                <span class="nextsong__item-action-heart">
-                                    <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
-                                    <i class="far fa-heart nextsong__item-action-heart-icon2"></i>
-                                </span>
-                                <span class="nextsong__item-action-dot">
-                                    <i class="fas fa-ellipsis-h "></i>
-                                </span>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="nextsong__last">
                         <h3 class="nextsong__last-heading js__main-color">Tiếp theo</h3>
@@ -1730,7 +1603,7 @@
                                 </div>
                             </li> -->
                         </ul>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <!-- END NEXT-SONG -->
@@ -1748,15 +1621,7 @@
                     </li>
                     <li class="mobile-tab__item js__mobile-tab__item js__main-color">
                         <i class="fas fa-chart-line"></i>
-                        #zingchart
-                    </li>
-                    <li class="mobile-tab__item js__main-color">
-                        <i class="fas fa-broadcast-tower"></i>
-                        Radio
-                    </li>
-                    <li class="mobile-tab__item js__main-color">
-                        <i class="far fa-list-alt"></i>
-                        Theo Dõi
+                        Nhạc hot
                     </li>
                 </ul>
             </div>
@@ -1788,7 +1653,7 @@
                                     </svg> 
                                 </div> -->
                             </div>
-                            
+
                             <div class="music-control__left-content">
                                 <span class="music-control__left-content-song js__main-color">Cưới luôn được không</span>
                                 <span class="music-control__left-content-singer js__sub-color">Út nhị Cover</span>
@@ -1889,7 +1754,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- END PLAYER ON MOBILE -->
 
 
@@ -1904,4 +1769,5 @@
 
     <script src="/assets/javascript/main.js"></script>
 </body>
+
 </html>
