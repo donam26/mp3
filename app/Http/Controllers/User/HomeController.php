@@ -30,4 +30,7 @@ class HomeController
         }
         return View::make('user/home');
     }
+
+    
 }
+

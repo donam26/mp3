@@ -4,5 +4,8 @@
             "App\\": "app/",
             "Core\\": "core/"
         }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
     }
 }

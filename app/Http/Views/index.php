@@ -26,12 +26,7 @@
 
     <div class="container">
 
-        <?php
-        if (isset($_SESSION['error'])) {
-            echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
-            unset($_SESSION['error']);
-        }
-        ?>
+
 
 
 
@@ -51,7 +46,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
                                     <form action="/login/submit" method="POST">
-                                     
+
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" aria-describedby="emailHelp"
@@ -69,20 +64,19 @@
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
-                                        <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
+                                        <?php
+                                        if (isset($_SESSION['error'])) {
+                                            echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
+                                            unset($_SESSION['error']);
+                                        }
+                                        ?>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <a class="small" href="/forgot-password">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="/register">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
@@ -97,11 +91,11 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="/assets/admin//jquery/jquery.min.js"></script>
-    <script src="/assets/admin//bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/admin/jquery/jquery.min.js"></script>
+    <script src="/assets/admin/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="/assets/admin//jquery-easing/jquery.easing.min.js"></script>
+    <script src="/assets/admin/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="/assets/admin/js/sb-admin-2.min.js"></script>

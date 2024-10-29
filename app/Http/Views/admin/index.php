@@ -188,7 +188,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                        <img class="rounded-circle" src="https://static-zmp3.zadn.vn/skins/zmp3-v6.1/images/thumb-share.jpg"
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>

@@ -58,7 +58,19 @@ $router->add('/admin/users/edit', [AdminUserController::class, 'edit']);
 
 //user
 $router->add('/', [UserHomeController::class, 'index']);
+$router->add('/register', [AuthController::class, 'register']);
+$router->add('//register/submit', [AuthController::class, 'registerSubmit']);
 $router->add('/home', [UserHomeController::class, 'home']);
+
+
+// Quên mật khẩu
+$router->add('/forgot-password', [AuthController::class, 'forgotPassword']); 
+$router->add('/forgot-password-submit', [AuthController::class, 'forgotPasswordSubmit'], 'POST');
+
+// Đặt lại mật khẩu
+
+$router->add('/reset-password', [AuthController::class, 'resetPassword']);
+$router->add('/reset-password-submit', [AuthController::class, 'resetPasswordSubmit'], 'POST'); 
 
 
 
