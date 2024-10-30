@@ -62,6 +62,11 @@ $router->add('/register', [AuthController::class, 'register']);
 $router->add('//register/submit', [AuthController::class, 'registerSubmit']);
 $router->add('/home', [UserHomeController::class, 'home']);
 
+// music
+$router->add('/', [UserHomeController::class, 'index']);
+$router->add('/discover', [UserHomeController::class, 'discover']);
+$router->add('/hot-music', [UserHomeController::class, 'hotMusic']);
+$router->add('/recently', [UserHomeController::class, 'recently']);
 
 // Quên mật khẩu
 $router->add('/forgot-password', [AuthController::class, 'forgotPassword']); 
@@ -72,11 +77,14 @@ $router->add('/forgot-password-submit', [AuthController::class, 'forgotPasswordS
 $router->add('/reset-password', [AuthController::class, 'resetPassword']);
 $router->add('/reset-password-submit', [AuthController::class, 'resetPasswordSubmit'], 'POST'); 
 
-
-
 // api
 $router->add('/api/songs', [ApiSongController::class, 'index']);
+$router->add('/api/hotmusic', [ApiSongController::class, 'hotmusic']);
+$router->add('/api/recently', [ApiSongController::class, 'recently']);
+$router->add('/api/discover', [ApiSongController::class, 'discover']);
+$router->add('/api/user-history', [ApiSongController::class, 'recordHistory'], 'POST'); 
 
+$router->add('/api/song-random', [ApiSongController::class, 'random']);
 
 
 

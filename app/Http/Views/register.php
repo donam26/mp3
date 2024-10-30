@@ -22,26 +22,26 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Tạo tài khoản!</h1>
                             </div>
                             <form class="user" action="/register/submit" method="POST">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" name="username" placeholder="User Name" required>
+                                        <input type="text" class="form-control form-control-user" name="username" placeholder="Nhập Username..." required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="email" class="form-control form-control-user" name="email" placeholder="Email Address" required>
+                                        <input type="email" class="form-control form-control-user" name="email" placeholder="Nhập Email..." required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user" name="password" placeholder="Password" required>
+                                        <input type="password" class="form-control form-control-user" name="password" placeholder="Nhập Password..." required>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user" name="confirm_password" placeholder="Repeat Password" required>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">Register Account</button>
+                                <button type="submit" class="btn btn-primary btn-user btn-block">Đăng kí</button>
                                 <?php
                                 if (isset($_SESSION['error'])) {
                                     echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
@@ -56,10 +56,10 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="/forgot-password">Forgot Password?</a>
+                                <a class="small" href="/forgot-password">Quên mật khẩu?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="/">Already have an account? Login!</a>
+                                <a class="small" href="/">Đã có tải khoản? Đăng nhập!</a>
                             </div>
                         </div>
                     </div>

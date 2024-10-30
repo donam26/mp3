@@ -205,4 +205,31 @@ class Song extends Model
         $stmt = $this->connection->prepare("DELETE FROM song_statistics WHERE song_id = :song_id");
         $stmt->execute(['song_id' => $song_id]);
     }
+
+    public function getViewedSongsByUser($user_id)
+    {
+        $stmt = $this->connection->prepare("
+            SELECT 
+                songs.id AS song_id,
+                songs.title,
+                songs.genre,
+                songs.song_url,
+                songs.song_img,
+                songs.release_date,
+                songs.length,
+                user_history.played_at
+            FROM 
+                user_history
+            JOIN 
+                songs ON user_history.song_id = songs.id
+            WHERE 
+                user_history.user_id = :user_id
+            ORDER BY 
+                user_history.played_at DESC
+        ");
+        
+        $stmt->execute(['user_id' => $user_id]);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    
 }

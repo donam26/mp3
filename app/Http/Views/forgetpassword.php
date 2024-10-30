@@ -27,18 +27,17 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-2">Forgot Your Password?</h1>
-                                        <p class="mb-4">We get it, stuff happens. Just enter your email address below
-                                            and we'll send you a link to reset your password!</p>
+                                        <h1 class="h4 text-gray-900 mb-2">Bạn quên mật khẩu?</h1>
+                                        <p class="mb-4">Chúng tôi hiểu rồi, mọi thứ sẽ xảy ra. Chỉ cần nhập địa chỉ email của bạn dưới đây và chúng tôi sẽ gửi cho bạn một liên kết để đặt lại mật khẩu của bạn!</p>
                                     </div>
                                     <form class="user" action="/forgot-password-submit" method="POST">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 name="email"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                                placeholder="Nhập Username...">
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Reset Password</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Đặt lại mật khẩu</button>
                                         <?php
                                         // Hiển thị thông báo lỗi
                                         if (isset($_SESSION['error'])) {
@@ -55,10 +54,10 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="/register">Create an Account!</a>
+                                        <a class="small" href="/register">Tạo tài khoản!</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="/">Already have an account? Login!</a>
+                                        <a class="small" href="/">Đã có tài khoản? Đăng nhập!</a>
                                     </div>
                                 </div>
                             </div>

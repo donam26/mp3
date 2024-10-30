@@ -25,11 +25,6 @@
 <body class="bg-gradient-primary">
 
     <div class="container">
-
-
-
-
-
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
@@ -43,27 +38,26 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Xin chào</h1>
                                     </div>
                                     <form action="/login/submit" method="POST">
 
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                                placeholder="Nhập Username...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                                id="exampleInputPassword" placeholder="Nhập Password...">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
+                                                <label class="custom-control-label" for="customCheck">Ghi nhớ tôi</label>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Đăng nhập</button>
                                         <?php
                                         if (isset($_SESSION['error'])) {
                                             echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
@@ -73,10 +67,10 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="/forgot-password">Forgot Password?</a>
+                                        <a class="small" href="/forgot-password">Quên mật khẩu?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="/register">Create an Account!</a>
+                                        <a class="small" href="/register">Tạo tài khoản mới!</a>
                                     </div>
                                 </div>
                             </div>

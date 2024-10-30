@@ -31,6 +31,33 @@ class HomeController
         return View::make('user/home');
     }
 
+    public function discover()
+    {
+        if ($this->middleware->handle() !=='user') {
+            return View::make('index');
+            return;
+        }
+        return View::make('user/discover');
+    }
+
+    public function hotMusic()
+    {
+        if ($this->middleware->handle() !=='user') {
+            return View::make('index');
+            return;
+        }
+        return View::make('user/hotmusic');
+    }
+
+    public function recently()
+    {
+        if ($this->middleware->handle() !=='user') {
+            return View::make('index');
+            return;
+        }
+        return View::make('user/recently');
+    }
+
     
 }
 

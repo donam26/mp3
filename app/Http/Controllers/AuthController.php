@@ -265,21 +265,21 @@ class AuthController
         }
 
         // Lấy người dùng từ token và kiểm tra thời gian hết hạn
-        $stmt = $this->connection->prepare("SELECT id FROM users WHERE reset_token = :token AND token_expiry > NOW()");
+        $stmt = $this->connection->prepare("SELECT id FROM users WHERE reset_token = :token");
         $stmt->bindParam(':token', $token);
         $stmt->execute();
         $user = $stmt->fetch();
 
         if ($user) {
             // Cập nhật mật khẩu mới và xóa token
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $hashed_password = $password;
             $stmt = $this->connection->prepare("UPDATE users SET password = :password, reset_token = NULL, token_expiry = NULL WHERE id = :id");
             $stmt->bindParam(':password', $hashed_password);
             $stmt->bindParam(':id', $user['id']);
             $stmt->execute();
 
             $_SESSION['success'] = "Mật khẩu của bạn đã được đặt lại thành công. Vui lòng đăng nhập.";
-            header('Location: /login');
+            header('Location: /');
         } else {
             $_SESSION['error'] = "Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.";
             header('Location: /reset-password');
@@ -293,19 +293,13 @@ class AuthController
     }
 
     public function resetPassword()
-{
-    // Kiểm tra xem có token hay không
-    if (!isset($_GET['token'])) {
-        $_SESSION['error'] = "Yêu cầu không hợp lệ.";
-        header('Location: /forgot-password');
-        exit;
+    {
+        if (!isset($_GET['token'])) {
+            $_SESSION['error'] = "Yêu cầu không hợp lệ.";
+            header('Location: /forgot-password');
+            exit;
+        }
+        $token = $_GET['token'];
+        return View::make('resetpassword', ['token' => $token]);
     }
-
-    // Lấy token từ URL
-    $token = $_GET['token'];
-
-    // Kiểm tra token trong cơ sở dữ liệu, nếu hợp lệ thì hiển thị form đặt lại mật khẩu
-    return View::make('resetpassword', ['token' => $token]);
-}
-
 }
